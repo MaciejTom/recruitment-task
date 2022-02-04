@@ -31,9 +31,9 @@ const GifPage = () => {
 
   return (
     <Wrapper>
-      <Gif src={gif.data.images.downsized_large.url} alt={gif.title} height="500px"/>
+      <Gif src={gif.data.images.downsized_large.url} alt={gif.title} height="500px" width='500px' />
       <RatingDiv>
-        <Star src={star} height='100px'/>
+        <Star src={star} height='100px' width='100px'/>
         <Rating>{gif.data.rating.toUpperCase()}</Rating>
       </RatingDiv>
       <Button to="/">Home</Button>
