@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 //Styles
 import { Wrapper, Content, Input } from "./SearchBar.styles";
 //Images
