@@ -4,28 +4,29 @@ export const Wrapper = styled.section`
   display: flex;
   align-items: center;
   height: 100px;
-  background: var(--darkGrey);
-  padding: 0 1.3em;
+  padding: 1.5em 1.3em 0 ;
+  margin-bottom: 1.5em;
 `;
 export const Content = styled.div`
   position: relative;
   max-width: var(--maxWidth);
   height: 55px;
   width: 100%;
-  background: var(--medGrey);
+  background: #ffffff80;
   margin: 0 auto;
   border-radius: 40px;
-  color: var(--white);
 
   img {
     position: absolute;
     left: 15px;
     top: 14px;
     width: 30px;
+    
   }
+}`
 
-  input {
-    font-size: var(--fontBig);
+export const Input = styled.input`
+    font-size: 1.5rem;
     position: absolute;
     left: 0;
     margin: 0.5em 0;
@@ -33,7 +34,7 @@ export const Content = styled.div`
     border: 0;
     width: 95%;
     background: transparent;
-    color: var(--white);
+    color: grey;
     :focus {
       outline: none;
     }

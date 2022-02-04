@@ -1,20 +1,12 @@
 //Components
 import Grid from "../components/Grid";
-// import Thumb from "./Thumb";
-
 import SearchBar from "../components/SearchBar";
-
 //Hooks
 import useGifsFetch from "../hooks/useGifsFetch";
 
 const Home = () => {
-  const {
-    GIFs,
-    error,
-    loading,
-    setSearchTerm,
-    // searchTerm,
-  } = useGifsFetch();
+  
+  const { GIFs, error, loading, setSearchTerm } = useGifsFetch();
 
   return (
     <>

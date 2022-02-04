@@ -1,14 +1,14 @@
 import React from "react";
 
 import {
-    ErrorH1
+  ErrorInfo
 } from './Error.styles.js'
 
 const Error = () => {
   return (
-    <ErrorH1>
+    <ErrorInfo>
              SOMETHING WENT WRONG! :(
-    </ErrorH1>
+    </ErrorInfo>
   );
 };
 

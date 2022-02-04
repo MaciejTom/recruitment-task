@@ -3,16 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
 :root {
     --maxWidth: 1280px;
-    --white: #fff;
-    --lightGrey: #eee;
-    --medGrey: #353535;
-    --darkGrey: #1c1c1c;
-    --fontSuperBig: 2.5rem;
-    --fontBigger: 2rem;
-    --fontBig: 1.5rem;
-    --fontMed: 1.2rem;
-    --fontSmall: 1rem;
-}
+
 * {
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
@@ -21,6 +12,8 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    background: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+
    
     h1 {
         font-size: 2rem;

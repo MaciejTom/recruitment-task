@@ -1,49 +1,46 @@
-import React, { useState, useEffect, useRef } from "react";
-
+import { useState, useEffect, useContext } from "react";
 //Styles
-import { Wrapper, Content } from "./SearchBar.styles";
+import { Wrapper, Content, Input } from "./SearchBar.styles";
 //Images
 import searchIcon from "../../images/search-icon.svg";
+//Context
+import { Context } from "../../inputContext";
 
 const SearchBar = ({ setSearchTerm }) => {
-  const [searchValue, setSearchValue] = useState("");
-
-  const initial = useRef(true);
+    const { setInput, input } = useContext(Context);
 
   useEffect(() => {
-
-    if (initial.current) {
-      initial.current = false;
-      return
-    }
     const timer = setTimeout(() => {
-    
-      setSearchTerm(searchValue);
-    }, 500)
+      setSearchTerm(input);
+    }, 500);
 
     return () => clearTimeout(timer);
-  }, [setSearchTerm, searchValue])
+  }, [setSearchTerm, input]);
+
+  useEffect(() => {
+    setInput(input);
+  }, []);
 
   const handleChange = (e) => {
-    setSearchValue(e.target.value);
-   
+    setInput(e.target.value);
   };
 
   return (
     <Wrapper>
       <Content>
         <img src={searchIcon} alt="search-icon" />
-        <input
+        <Input
           type="text"
           placeholder="Search GIF"
-          value={searchValue}
-          onChange={(e) => handleChange(e)}
+          value={input}
+          onChange={(e) => {
+            handleChange(e);
+            setInput(e.target.value);
+          }}
         />
       </Content>
     </Wrapper>
   );
 };
-
-
 
 export default SearchBar;

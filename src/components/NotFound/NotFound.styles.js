@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom'
 
 export const Wrapper = styled.div`
   max-width: var(--maxWidth);
@@ -19,4 +20,13 @@ export const Content = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+`;
+
+export const Button = styled(Link)`
+  text-decoration: none;
+  color: black;
+  background: white;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  padding: 0.4em 1em;
 `;
