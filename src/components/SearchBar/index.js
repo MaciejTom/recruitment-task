@@ -19,7 +19,7 @@ const SearchBar = ({ setSearchTerm }) => {
 
   useEffect(() => {
     setInput(input);
-  }, []);
+  }, [setInput, input]);
 
   const handleChange = (e) => {
     setInput(e.target.value);

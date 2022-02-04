@@ -6,6 +6,7 @@ export const Gif = styled.img`
   border-radius: 5px;
   width: 100%;
   max-height: 500px;
+  height: 100%;
 `;
 export const Button = styled(Link)`
   text-decoration: none;
@@ -25,6 +26,7 @@ export const Wrapper = styled.main`
   flex-direction: column;
   row-gap: 1rem;
   padding: 4rem 1rem;  
+ 
   }
 `;
 export const RatingDiv = styled.div`

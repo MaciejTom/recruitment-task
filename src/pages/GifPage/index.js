@@ -33,7 +33,7 @@ const GifPage = () => {
     <Wrapper>
       <Gif src={gif.data.images.downsized_large.url} alt={gif.title} height="500px"/>
       <RatingDiv>
-        <Star src={star} />
+        <Star src={star} height='100px'/>
         <Rating>{gif.data.rating.toUpperCase()}</Rating>
       </RatingDiv>
       <Button to="/">Home</Button>
