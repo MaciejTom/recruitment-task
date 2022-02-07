@@ -14,7 +14,8 @@ const Grid = ({ GIFs, error, loading }) => {
     
     return <Spinner/>;
   }
-    
+  
+  
   return (
     <Wrapper>      
       <Content>{GIFs.map(gif => <GifElement key={gif.id} {...gif}/>)}</Content>
